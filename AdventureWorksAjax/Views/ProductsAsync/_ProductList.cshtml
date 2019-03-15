@@ -1,0 +1,56 @@
+﻿@using X.PagedList.Mvc;  @* import this so we get our HTML Helper *@
+@using X.PagedList;
+
+@model IEnumerable<MVCEFCodeFirst.Models.Product>
+
+@* This is the Async version *@
+
+<table class="table table-hover table-striped table-responsive">
+    <tr>
+        <th>
+            Category
+        </th>
+        <th>
+            Model
+        </th>
+        <th>
+            Product
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Color)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductCategory.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductModel.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ProductID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
+            </td>
+        </tr>
+    }
+
+</table>
+<br />
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+

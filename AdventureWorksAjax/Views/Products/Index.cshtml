@@ -1,0 +1,24 @@
+﻿@*import this so we can cast our list to IPagedList
+    (only necessary because ViewBag is dynamic) *@
+@model IEnumerable<MVCEFCodeFirst.Models.Product>
+
+@{
+    ViewBag.Title = "Products";
+}
+<h2>AdventureWorks Products</h2>
+<h3>With EF, AJAX and Paging (done with a Partial Page)</h3>
+<p>Uses Synchronous calls</p>
+<div>
+    Velit mollis odio sollicitudin lacinia aliquam posuere, sapien elementum lobortis tincidunt, turpis dui ornare nisl, sollicitudin interdum turpis nunc eget sem nulla eu ultricies orci praesent id augue nec lorem pretium congue sit amet ac nunc fusce iaculis lorem eu diam hendrerit at mattis purus dignissim vivamus mauris tellus, fringilla vel dapibus a, blandit quis erat vivamus elementum aliquam luctus etiam fringilla pretium sem vitae sodales mauris id nulla est praesent laoreet, metus vel auctor aliquam, eros purus vulputate leo, eget consequat neque quam id tellus duis ultricies tempor tortor, vitae dignissim ligula mattis nec in hac habitasse platea dictumst.
+    <br /><br />
+    <img src="~/Images/IMG_20150325_130040750.jpg" height="350" width="750" class="roundedCorners" />
+    <br /><br />
+</div>
+
+<p>
+    @Html.ActionLink("Create New Product", "Create")
+</p>
+<div id="productsTable">
+    @Html.Partial("_ProductList",Model)
+</div>
+

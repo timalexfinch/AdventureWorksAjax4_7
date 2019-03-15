@@ -1,0 +1,14 @@
+[
+  {
+    "outputFileName": "Content/superhero341.min.css",
+    "inputFiles": [
+      "Content/superhero341.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/superhero.min.css",
+    "inputFiles": [
+      "Content/superhero.css"
+    ]
+  }
+]

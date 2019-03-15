@@ -1,0 +1,90 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Tim's AJAX site</h1>
+    <p class="lead">
+        <br />
+        An application to show how to use:
+        <ul>
+            <li>.NET Framework 4.7.2</li>
+            <li>MVC 5</li>
+            <li>jQuery</li>
+            <li>AJAX</li>
+        </ul>
+        to call server-side code.
+        <br /><br />
+        On this page, you can call our own <strong>GetTime</strong> service, plus a <strong>Get Random User</strong> service from the web.
+        <br /><br />
+        Click on the <strong>Products</strong> link above to get data from a database.
+        <br />
+        Click on the <strong>Products Async</strong> link above to get data from a database, done using Async calls.
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            <img src="~/Images/SANY0402.JPG" height="300" width="300" class="roundedCorners" />
+            <br /><br />
+            Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.dunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+        </p>
+
+        <br />
+        <p>
+            <input id="btnGetTime" type="button"
+                   value="Call GetTime using jQuery and AJAX" />
+            <br /><br />
+        </p>
+        <p id="whatsTheTime">
+
+        </p>
+    </div>
+
+
+    <div class="col-md-4">
+        <h2>Call a Web Service</h2>
+        <p>
+            Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.dunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+        </p>
+        <br />
+        <p>
+            <input id="btnGetRandomUser" type="button" value="Call Get Random User Web Service" />
+            <br /><br />
+        </p>
+        <p id="randomUser" class="text-center roundedCorners">
+
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <h3>
+        And here's two tables. One has striping and hover done with Bootstrap, the other is done by hand using jQuery
+    </h3>
+    <div class="col-md-6">
+        <br />
+        <table id="tblOne" class="table table-bordered
+                   table-hover table-striped table-condensed">
+            <thead>Table 1 - Styled with Bootstrap</thead>
+            <tbody>
+                <tr><td>one</td><td>two</td><td>three</td></tr>
+                <tr><td>four</td><td>five</td><td>six</td></tr>
+                <tr><td>seven</td><td>eight</td><td>nine</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <br />
+        <table id="tblTwo" class="table table-bordered table-condensed">
+            <thead>Table 2 - Styled by hand with jQuery</thead>
+            <tbody>
+                <tr><td>one</td><td>two</td><td>three</td></tr>
+                <tr><td>four</td><td>five</td><td>six</td></tr>
+                <tr><td>seven</td><td>eight</td><td>nine</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
